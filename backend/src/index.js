@@ -19,6 +19,9 @@ const app=express()
 const port=process.env.PORT || 3000
 
 
+// parsing requests
+app.use(express.json())
+
 
 app.use('/api/users/',userRoutes)
 app.use('/api/admin/',adminRoutes)
